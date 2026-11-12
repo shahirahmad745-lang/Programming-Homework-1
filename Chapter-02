@@ -1,0 +1,608 @@
+Chapter 2 – Elementary Programming
+
+Checkpoint Solutions
+
+Course: Programming
+Programming Language: Java
+Textbook: Introduction to Java Programming – Y. Daniel Liang
+Chapter: 2 – Elementary Programming
+
+---
+
+Section 2.2 – Writing a Simple Program
+
+2.2.1 Identify and fix the errors in the following code.
+
+Errors:
+
+1. "string" must be "String" because Java is case-sensitive.
+2. The "main" method must be declared "static".
+3. A string cannot be broken into two lines without proper concatenation.
+
+Corrected Code:
+
+public class Test {
+    public static void main(String[] args) {
+        double i = 50.0;
+        double k = i + 50.0;
+        double j = k + 1;
+
+        System.out.println("j is " + j + " and " +
+                           "k is " + k);
+    }
+}
+
+Output:
+
+j is 101.0 and k is 100.0
+
+---
+
+Section 2.3 – Reading Input from the Keyboard
+
+2.3.1 How do you write a statement to let the user enter a double value from the keyboard? What happens if you enter 5a?
+
+Answer:
+
+First, create a Scanner object:
+
+Scanner input = new Scanner(System.in);
+
+Then use:
+
+double radius = input.nextDouble();
+
+If the user enters "5a", Java throws an "InputMismatchException" because "5a" is not a valid double value.
+
+2.3.2 Are there any performance differences between the following two import statements?
+
+import java.util.Scanner;
+import java.util.*;
+
+Answer:
+
+There is no significant performance difference.
+
+- "import java.util.Scanner;" imports only the Scanner class.
+- "import java.util.*;" makes all accessible types in the "java.util" package available by their simple names.
+
+The first statement is more specific and is generally preferred when only Scanner is needed.
+
+---
+
+Section 2.4 – Identifiers
+
+2.4.1 Which identifiers are valid? Which are Java keywords?
+
+Valid identifiers:
+
+- "miles"
+- "Test"
+- "$4"
+- "apps"
+- "x"
+- "y"
+- "radius"
+
+Invalid identifiers:
+
+- "a++" – Contains an operator.
+- "--a" – Contains an operator.
+- "4#R" – Starts with a digit and contains an invalid character.
+- "#44" – Contains an invalid character.
+
+Java keywords:
+
+- "class"
+- "public"
+- "int"
+
+Note: Java identifiers cannot be Java reserved keywords.
+
+---
+
+Section 2.5 – Assignment Statements and Expressions
+
+2.5.1 Identify and fix the errors in the following code.
+
+Original error:
+
+The variable "k" has not been declared or initialized.
+
+Corrected Code:
+
+public class Test {
+    public static void main(String[] args) {
+        int k = 5;
+        int i = k + 2;
+
+        System.out.println(i);
+    }
+}
+
+Output:
+
+7
+
+---
+
+Section 2.6 – Assignment Statements
+
+2.6.1 Identify and fix the errors in the following code.
+
+Original error:
+
+Variables "j" and "k" have not been declared.
+
+Corrected Code:
+
+public class Test {
+    public static void main(String[] args) {
+        int i, j, k;
+
+        i = j = k = 2;
+
+        System.out.println(i + " " + j + " " + k);
+    }
+}
+
+Output:
+
+2 2 2
+
+---
+
+Section 2.7 – Named Constants
+
+2.7.1 What are the benefits of using constants? Declare an int constant SIZE with value 20.
+
+Answer:
+
+The benefits of using constants are:
+
+1. They prevent accidental changes to values.
+2. They make programs easier to understand.
+3. They improve code readability.
+4. They make programs easier to maintain.
+
+Declaration:
+
+final int SIZE = 20;
+
+2.7.2 Translate the following algorithm into Java code.
+
+Java Code:
+
+public class MilesToKilometers {
+    public static void main(String[] args) {
+        double miles = 100;
+
+        final double KILOMETERS_PER_MILE = 1.609;
+
+        double kilometers =
+                miles * KILOMETERS_PER_MILE;
+
+        System.out.println("Kilometers: " + kilometers);
+    }
+}
+
+Output:
+
+Kilometers: 160.9
+
+Answer: The value of kilometers is "160.9".
+
+---
+
+Section 2.8 – Naming Conventions
+
+2.8.1 What are the naming conventions for class names, method names, constants, and variables?
+
+Answer:
+
+1. Class names: Begin with an uppercase letter and use UpperCamelCase.
+   Example: "StudentManagement"
+
+2. Method names: Begin with a lowercase letter and use lowerCamelCase.
+   Example: "readDouble()"
+
+3. Constants: Use uppercase letters with underscores between words.
+   Example: "MAX_VALUE"
+
+4. Variables: Begin with a lowercase letter and use lowerCamelCase.
+   Example: "studentName"
+
+Classification:
+
+Name| Classification
+"MAX_VALUE"| Constant
+"Test"| Class
+"read"| Method
+"readDouble"| Method
+
+---
+
+Section 2.9 – Numeric Data Types and Operations
+
+2.9.1 Find the largest and smallest byte, short, int, long, float, and double. Which requires the least amount of memory?
+
+Answer:
+
+Data Type| Smallest Value| Largest Value| Memory
+byte| -128| 127| 1 byte
+short| -32,768| 32,767| 2 bytes
+int| -2,147,483,648| 2,147,483,647| 4 bytes
+long| -9.22 × 10¹⁸| 9.22 × 10¹⁸| 8 bytes
+float| -3.4028235E38| 3.4028235E38| 4 bytes
+double| -1.7976931348623157E308| 1.7976931348623157E308| 8 bytes
+
+Answer: The "byte" data type requires the least amount of memory (1 byte).
+
+2.9.2 Show the result of the following remainders.
+
+Expression| Result
+"56 % 6"| 2
+"78 % -4"| 2
+"-34 % 5"| -4
+"-34 % -5"| -4
+"5 % 1"| 0
+"1 % 5"| 1
+
+2.9.3 If today is Tuesday, what will be the day in 100 days?
+
+Solution:
+
+100 % 7 = 2
+
+After 100 days, the day will be two days after Tuesday.
+
+Answer: Thursday.
+
+2.9.4 What is the result of 25 / 4? How would you rewrite the expression if you wished the result to be a floating-point number?
+
+Answer:
+
+In Java, integer division removes the fractional part.
+
+System.out.println(25 / 4);
+
+Result:
+
+6
+
+To obtain a floating-point result:
+
+System.out.println(25.0 / 4);
+
+Result:
+
+6.25
+
+2.9.5 Show the result of the following code.
+
+System.out.println(2 * (5 / 2 + 5 / 2));
+System.out.println(2 * 5 / 2 + 2 * 5 / 2);
+System.out.println(2 * (5 / 2));
+System.out.println(2 * 5 / 2);
+
+Output:
+
+8
+10
+4
+5
+
+Explanation: Integer division is performed because both operands of each division are integers.
+
+2.9.6 Are the following statements correct? If so, show the output.
+
+System.out.println("25 / 4 is " + 25 / 4);
+System.out.println("25 / 4.0 is " + 25 / 4.0);
+System.out.println("3 * 2 / 4 is " + 3 * 2 / 4);
+System.out.println("3.0 * 2 / 4 is " + 3.0 * 2 / 4);
+
+Answer: All four statements are correct.
+
+Output:
+
+25 / 4 is 6
+25 / 4.0 is 6.25
+3 * 2 / 4 is 1
+3.0 * 2 / 4 is 1.5
+
+2.9.7 Write a statement to display the result of 23.5.
+
+System.out.println(23.5);
+
+2.9.8 Suppose m and r are integers. Write a Java expression for mr² to obtain a floating-point result.
+
+Answer:
+
+(double) m * r * r
+
+This converts "m" to a double before multiplication, producing a floating-point result.
+
+---
+
+Section 2.10 – Numeric Literals
+
+2.10.1 How many accurate digits are stored in a float or double type variable?
+
+Answer:
+
+- "float": Approximately 6–7 significant decimal digits.
+- "double": Approximately 15–16 significant decimal digits.
+
+2.10.2 Which of the following are correct literals for floating-point numbers?
+
+12.3
+12.3e+2
+23.4e-2
+-334.4
+20.5
+39F
+40D
+
+Answer: All of them are valid floating-point literals in Java.
+
+2.10.3 Which of the following are the same as 52.534?
+
+1. "5.2534e+1" = 52.534
+2. "0.52534e+2" = 52.534
+3. "525.34e-1" = 52.534
+4. "5.2534e+0" = 5.2534
+
+Answer: Options 1, 2, and 3.
+
+2.10.4 Which of the following are correct literals?
+
+Literal| Validity
+"5_2534e+1"| Valid
+"_2534"| Invalid as a numeric literal
+"5_2"| Valid
+"5_"| Invalid
+
+Answer: "5_2534e+1" and "5_2" are valid numeric literals.
+
+---
+
+Section 2.11 – Evaluating Expressions
+
+2.11.1 What does REPL stand for? How do you launch JShell?
+
+REPL stands for Read-Evaluate-Print Loop.
+
+JShell is an interactive Java tool that allows users to execute Java statements and expressions without creating a complete program.
+
+To launch JShell, open Command Prompt or Terminal and type:
+
+jshell
+
+Press Enter.
+
+---
+
+Section 2.12 – Arithmetic Expressions
+
+2.12.1 How would you write the following arithmetic expressions in Java?
+
+a.
+
+[
+\frac{4}{3(r+34)}-9(a+bc)+\frac{3+d(2+a)}{a+bd}
+]
+
+Java Expression:
+
+4.0 / (3 * (r + 34))
+    - 9 * (a + b * c)
+    + (3 + d * (2 + a)) / (a + b * d)
+
+b.
+
+[
+5.5 \times (r+2.5)^{2.5+t}
+]
+
+Java Expression:
+
+5.5 * Math.pow(r + 2.5, 2.5 + t)
+
+---
+
+Section 2.13 – Displaying the Current Time
+
+2.13.1 How do you obtain the current second, minute, and hour?
+
+Answer:
+
+Java provides the "Calendar" class to obtain the current hour, minute, and second.
+
+Java Code:
+
+import java.util.Calendar;
+
+public class CurrentTime {
+    public static void main(String[] args) {
+        Calendar calendar = Calendar.getInstance();
+
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND);
+
+        System.out.println("Current time: "
+                + hour + ":" + minute + ":" + second);
+    }
+}
+
+This displays the current local time in hours, minutes, and seconds.
+
+---
+
+Section 2.14 – Augmented Assignment Operators
+
+2.14.1 Show the output of the following code.
+
+double a = 6.5;
+a += a + 1;
+System.out.println(a);
+
+a = 6;
+a /= 2;
+System.out.println(a);
+
+Output:
+
+14.0
+3.0
+
+Explanation:
+
+First calculation:
+
+6.5 + (6.5 + 1) = 14.0
+
+Second calculation:
+
+6.0 / 2 = 3.0
+
+---
+
+Section 2.15 – Increment and Decrement Operators
+
+2.15.1 Which of these statements are true?
+
+a. Any expression can be used as a statement.
+
+Answer: False.
+
+b. The expression x++ can be used as a statement.
+
+Answer: True.
+
+c. The statement x = x + 5 is also an expression.
+
+Answer: True. An assignment expression produces a value.
+
+d. The statement x = y = x = 0 is illegal.
+
+Answer: False. It is legal if the variables have compatible types and are declared.
+
+2.15.2 Show the output of the following code.
+
+int a = 6;
+int b = a++;
+
+System.out.println(a);
+System.out.println(b);
+
+a = 6;
+b = ++a;
+
+System.out.println(a);
+System.out.println(b);
+
+Output:
+
+7
+6
+7
+7
+
+Explanation:
+
+- "a++" is post-increment: the original value is assigned first, then "a" increases.
+- "++a" is pre-increment: "a" increases first, then the new value is assigned.
+
+---
+
+Section 2.16 – Numeric Type Conversions
+
+2.16.1 Can different types of numeric values be used together in a computation?
+
+Answer:
+
+Yes. Java allows different numeric types to be used together in a computation.
+
+Java automatically converts smaller numeric types to compatible larger types when necessary. This process is called type promotion.
+
+2.16.2 What does an explicit casting from a double to an int do with the fractional part? Does casting change the variable being cast?
+
+Answer:
+
+Casting from "double" to "int" removes the fractional part by truncating toward zero.
+
+It does not change the original variable.
+
+Example:
+
+double number = 12.75;
+int result = (int) number;
+
+The result is "12", while the original "number" remains "12.75".
+
+2.16.3 Show the following output.
+
+float f = 12.5F;
+int i = (int) f;
+
+System.out.println("f is " + f);
+System.out.println("i is " + i);
+
+Output:
+
+f is 12.5
+i is 12
+
+2.16.4 If you change (int)(tax * 100) / 100.0 to (int)(tax * 100) / 100 in line 11 in Listing 2.8, what will be the output for the input purchase amount of 197.556?
+
+Solution:
+
+Sales tax rate = 6%
+
+Tax calculation:
+
+197.556 × 0.06 = 11.85336
+
+After casting:
+
+(int)(11.85336 * 100) / 100
+
+1185 / 100 = 11
+
+Because both operands are integers, Java performs integer division.
+
+Answer: The displayed sales tax is:
+
+Sales tax is $11
+
+2.16.5 Show the output of the following code.
+
+double amount = 5;
+
+System.out.println(amount / 2);
+System.out.println(5 / 2);
+
+Output:
+
+2.5
+2
+
+Explanation:
+
+- "amount / 2" performs floating-point division.
+- "5 / 2" performs integer division.
+
+2.16.6 Write an expression that rounds a double value in variable d to an integer.
+
+Answer (nearest integer for nonnegative values):
+
+(int)(d + 0.5)
+
+For mathematical rounding up to the next integer:
+
+(int)Math.ceil(d)
+
+---
+
+End of Chapter 2 – Checkpoint Solutions
