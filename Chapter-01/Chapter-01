@@ -1,0 +1,345 @@
+Chapter 1 – Introduction to Computers, Programs, and Java
+
+Course: Programming
+Language: Java
+Textbook: Introduction to Java Programming – Y. Daniel Liang
+Chapter: 1 – Introduction to Computers, Programs, and Java
+
+---
+
+Section 1.2 – Hardware and Software
+
+1.2.1 What are hardware and software?
+
+- Hardware: The physical components of a computer that can be seen and touched, such as the keyboard, monitor, CPU, and mouse.
+- Software: A collection of programs and instructions that tell the computer what to do.
+
+1.2.2 List the five major hardware components of a computer.
+
+The five major hardware components are:
+
+1. Central Processing Unit (CPU)
+2. Memory
+3. Storage Devices
+4. Input Devices
+5. Output Devices
+
+1.2.3 What does the acronym CPU stand for? What unit is used to measure CPU speed?
+
+CPU stands for Central Processing Unit.
+
+CPU speed is commonly measured in Hertz (Hz), usually gigahertz (GHz).
+
+1.2.4 What is a bit? What is a byte?
+
+- Bit: The smallest unit of data in a computer. It can have a value of 0 or 1.
+- Byte: A group of 8 bits.
+
+1.2.5 What is memory for? What does RAM stand for? Why is memory called RAM?
+
+Memory temporarily stores programs and data that the CPU needs while the computer is running.
+
+RAM stands for Random Access Memory.
+
+It is called RAM because any memory location can be accessed directly in approximately the same amount of time.
+
+1.2.6 What unit is used to measure memory size? What unit is used to measure disk size?
+
+Memory and disk sizes are commonly measured in:
+
+- Bytes (B)
+- Kilobytes (KB)
+- Megabytes (MB)
+- Gigabytes (GB)
+- Terabytes (TB)
+
+1.2.7 What is the primary difference between memory and a storage device?
+
+Memory (RAM) is temporary and volatile, meaning its data is lost when the power is turned off.
+
+A storage device, such as an SSD or hard disk, stores data permanently, even when the computer is turned off.
+
+---
+
+Section 1.3 – Programming Languages
+
+1.3.1 What language does the CPU understand?
+
+The CPU understands machine language, which consists of binary instructions represented by 0s and 1s.
+
+1.3.2 What is an assembly language? What is an assembler?
+
+- Assembly Language: A low-level programming language that uses symbolic instructions to represent machine-language instructions.
+- Assembler: A program that translates assembly-language instructions into machine language.
+
+1.3.3 What is a high-level programming language? What is a source program?
+
+- High-Level Programming Language: A programming language that uses English-like words and mathematical symbols to make programming easier.
+- Source Program: A program written in a high-level programming language.
+
+Examples include Java, Python, C++, and C#.
+
+1.3.4 What is an interpreter? What is a compiler?
+
+- Interpreter: A program that translates and executes instructions at runtime.
+- Compiler: A program that translates source code into another form, such as machine code or bytecode.
+
+1.3.5 What is the difference between an interpreted language and a compiled language?
+
+An interpreted language is generally executed through an interpreter at runtime.
+
+A compiled language is translated by a compiler before execution.
+
+Some languages, such as Java, use both compilation and runtime interpretation or just-in-time compilation.
+
+---
+
+Section 1.4 – Operating Systems
+
+1.4.1 What is an operating system? List some popular operating systems.
+
+An Operating System (OS) is system software that manages computer hardware and software resources and provides services for applications.
+
+Popular operating systems include:
+
+1. Microsoft Windows
+2. macOS
+3. Linux
+4. Android
+5. iOS
+
+1.4.2 What are the major responsibilities of an operating system?
+
+The major responsibilities of an operating system are:
+
+1. Managing memory.
+2. Managing processes.
+3. Managing input and output devices.
+4. Managing files and storage.
+5. Providing security and access control.
+6. Providing a user interface.
+
+1.4.3 What are multiprogramming, multithreading, and multiprocessing?
+
+- Multiprogramming: Keeping multiple programs in memory and switching the CPU between them to improve CPU utilization.
+- Multithreading: Allowing multiple threads of execution within a single process.
+- Multiprocessing: Using two or more processors or CPU cores to execute tasks simultaneously.
+
+---
+
+Section 1.6 – Java, the Internet, and the World Wide Web
+
+1.6.1 What is the Java language specification?
+
+The Java language specification is an official document that defines the syntax, semantics, and rules of the Java programming language.
+
+1.6.2 What does JDK stand for? What does JRE stand for?
+
+- JDK: Java Development Kit. It provides tools for developing Java programs, including the compiler.
+- JRE: Java Runtime Environment. It provides the components needed to run Java applications, including the JVM and runtime libraries.
+
+1.6.3 What does IDE stand for?
+
+IDE stands for Integrated Development Environment.
+
+It is software that provides tools for writing, compiling, running, and debugging programs.
+
+1.6.4 Are tools like NetBeans and Eclipse different languages from Java, or are they dialects or extensions of Java?
+
+No. NetBeans and Eclipse are not programming languages, dialects, or extensions of Java.
+
+They are Integrated Development Environments (IDEs) used to develop Java programs.
+
+---
+
+Section 1.7 – A Simple Java Program
+
+1.7.1 What is a keyword? List some Java keywords.
+
+A keyword is a reserved word in Java that has a predefined meaning and cannot be used as an identifier.
+
+Examples include:
+
+"public", "class", "static", "void", "int", "if", "else", "while", "for", "return", and "new".
+
+1.7.2 Is Java case sensitive? What is the case for Java keywords?
+
+Yes, Java is case sensitive.
+
+All Java keywords are written in lowercase letters.
+
+For example, "public" is a keyword, but "Public" is not.
+
+1.7.3 What is a comment? Is the comment ignored by the compiler? How do you denote a comment line and a comment paragraph?
+
+A comment is explanatory text written in source code to make the program easier to understand.
+
+Yes, comments are ignored by the compiler.
+
+Java supports three comment styles:
+
+Single-line comment:
+
+// This is a single-line comment.
+
+Multi-line comment:
+
+/*
+ This is a multi-line comment.
+ It can contain several lines.
+*/
+
+Documentation comment:
+
+/**
+ * This is a documentation comment.
+ */
+
+1.7.4 What is the statement to display a string on the console?
+
+The following statement displays a string on the console:
+
+System.out.println("Hello, Java!");
+
+1.7.5 Show the output of the following code.
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("3.5 * 4 / 2 - 2.5 is ");
+        System.out.println(3.5 * 4 / 2 - 2.5);
+    }
+}
+
+Output:
+
+3.5 * 4 / 2 - 2.5 is
+4.5
+
+Explanation:
+
+1. "3.5 * 4 = 14.0"
+2. "14.0 / 2 = 7.0"
+3. "7.0 - 2.5 = 4.5"
+
+---
+
+Section 1.8 – Creating and Running Java Programs
+
+1.8.1 What is the Java source filename extension, and what is the Java bytecode filename extension?
+
+- Java source file extension: ".java"
+- Java bytecode file extension: ".class"
+
+1.8.2 What are the input and output of a Java compiler?
+
+- Input: Java source code (".java" file).
+- Output: Java bytecode (".class" file).
+
+1.8.3 What is the command to compile a Java program?
+
+The command is:
+
+javac Test.java
+
+1.8.4 What is the command to run a Java program?
+
+The command is:
+
+java Test
+
+The ".class" extension is not included when running the program.
+
+1.8.5 What is the JVM?
+
+JVM stands for Java Virtual Machine.
+
+It is a virtual machine that executes Java bytecode and allows Java programs to run on different platforms.
+
+1.8.6 Can Java run on any machine? What is needed to run Java on a computer?
+
+Java can run on different machines and operating systems.
+
+A compatible Java Runtime Environment (JRE), or Java Development Kit (JDK), is needed to run Java programs.
+
+1.8.7 If a NoClassDefFoundError occurs when you run a program, what is the cause of the error?
+
+This error occurs when the JVM cannot find a class definition that was available when the program was compiled or loaded.
+
+Possible causes include an incorrect classpath or a missing class file.
+
+1.8.8 If a NoSuchMethodError occurs when you run a program, what is the cause of the error?
+
+This error occurs when the JVM tries to call a method that cannot be found in the class at runtime.
+
+It commonly happens when incompatible versions of classes or libraries are used.
+
+---
+
+Section 1.9 – Programming Style and Documentation
+
+1.9.1 Reformat the following program according to the programming style and documentation guidelines. Use the end-of-line brace style.
+
+Corrected Program:
+
+/**
+ * This program displays a welcome message.
+ */
+public class Test {
+    // Main method
+    public static void main(String[] args) {
+        // Display output
+        System.out.println("Welcome to Java");
+    }
+}
+
+Output:
+
+Welcome to Java
+
+---
+
+Section 1.10 – Programming Errors
+
+1.10.1 What are syntax errors (compile errors), runtime errors, and logic errors?
+
+- Syntax Errors: Errors caused by violating the grammar or rules of the programming language. They are detected during compilation.
+- Runtime Errors: Errors that occur while a program is executing.
+- Logic Errors: Errors that occur when a program runs successfully but produces an incorrect result.
+
+1.10.2 Give examples of syntax errors, runtime errors, and logic errors.
+
+1. Syntax Error:
+
+System.out.println("Hello")
+
+The semicolon is missing.
+
+2. Runtime Error:
+
+int x = 10 / 0;
+
+This causes an "ArithmeticException" when executed.
+
+3. Logic Error:
+
+int length = 5;
+int width = 3;
+int area = 2 * (length + width);
+
+This calculates the perimeter instead of the area.
+
+1.10.3 If you forget to put a closing quotation mark on a string, what kind of error will be raised?
+
+A syntax error (compile-time error) will be raised because the string literal is not properly terminated.
+
+1.10.4 If your program needs to read integers, but the user entered strings, an error would occur when running this program. What kind of error is this?
+
+It is a runtime error. For example, using "Scanner.nextInt()" when the user enters non-numeric text can cause an "InputMismatchException".
+
+1.10.5 Suppose you write a program for computing the perimeter of a rectangle and you mistakenly write your program so it computes the area of a rectangle. What kind of error is this?
+
+This is a logic error because the program executes successfully but produces the wrong result.
+
+---
+
+End of Chapter 1 – Checkpoint Solutions
